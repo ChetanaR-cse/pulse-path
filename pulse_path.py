@@ -15,7 +15,7 @@ st.markdown("---")
 user_place = st.text_input("Search any City, Landmark, or Street in the World:", placeholder="e.g. Dubai, Tokyo, or Mumbai")
 
 if st.button("🚨 SEARCH GLOBAL DATABASE"):
-    geo = Nominatim(user_agent="pulse_path_global_explorer")
+    geo = Nominatim(user_agent="PulsePath_Global_App")
     
     with st.spinner(f"Accessing global satellite data for {user_place}..."):
         location = geo.geocode(user_place)
