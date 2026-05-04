@@ -18,7 +18,7 @@ if st.button("🚨 SEARCH GLOBAL DATABASE"):
     geo = Nominatim(user_agent="PulsePath_Global_App")
     
     with st.spinner(f"Accessing global satellite data for {user_place}..."):
-        location = geo.geocode(user_place)
+        location = geo.geocode(user_place,timeout=10)
         
         if location:
             # SEARCHING GLOBALLY
